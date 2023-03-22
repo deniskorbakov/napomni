@@ -1,7 +1,7 @@
 @extends('layouts.html')
 
 @section('title')
-    Reminder
+    Добро пожаловать!
 @endsection
 
 @section('main')
