@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('recorders', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->text('content');
+            $table->integer('value');
             $table->foreignId('users_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
