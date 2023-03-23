@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Recorder extends Model
 {
     use HasFactory;
+    protected $guarded = false;
+    protected $table = 'recorders';
 }
