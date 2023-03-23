@@ -35,7 +35,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <img src="icon/logo.svg" alt="logo" width="50" height="20">Reminder
+                        <img src="{{asset('icon/logo.svg')}}" alt="logo" width="50" height="20">Reminder
                     </h6>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores at atque dolores doloribus esse incidunt laboriosam minima nam nemo officia officiis omnis sapiente sunt totam, vitae voluptatem! Doloribus, voluptas.
