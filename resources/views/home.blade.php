@@ -1,11 +1,15 @@
-@extends('layouts.app')
+@extends('layouts.html')
 
-@section('content')
-<div class="container">
+@section('title')
+    Кабинет пользователя
+@endsection
+
+@section('main')
+<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">Панель управления</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +18,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    Вы зарегистрированы
                 </div>
             </div>
         </div>
