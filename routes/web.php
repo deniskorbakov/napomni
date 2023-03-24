@@ -11,5 +11,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['namespace' => 'App\Http\Controllers\Reminder'],  function() {
     Route::get('/reminders','IndexController')->name('reminders.index');
     Route::get('/reminders/create','CreateController')->name('reminders.create');
+    Route::post('/reminders','StoreController')->name('reminders.store');
+
 });
 
