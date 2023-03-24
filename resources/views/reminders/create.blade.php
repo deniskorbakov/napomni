@@ -10,19 +10,34 @@
     </div>
 
     <div class="container text-center mt-5">
-        <form action="" method="POST">
+        <form action="{{route('reminders.store')}}" method="POST">
             @csrf
             <div class="input-group">
                 <input class="form-control" type="text" name="name" placeholder="Введите название напоминания">
             </div>
 
+            @error('name')
+                <div class="alert alert-danger mt-3" role="alert">
+                    {{$message}}
+                </div>
+            @enderror
+
             <div class="input-group mt-4">
                 <textarea class="form-control" type="text" name="content" placeholder="Введите текст напоминания"></textarea>
             </div>
 
+            @error('content')
+            <div class="alert alert-danger mt-3" role="alert">
+                {{$message}}
+            </div>
+            @enderror
+
             <div class="mt-4">
-                <select id="inputState" class="form-select">
-                    <option selected>Уведомлять за:</option>
+                <p class="text-start">
+                    Уведомлять за:
+                </p>
+
+                <select id="inputState" class="form-select" name="value">
                     <option value="1">1 час</option>
                     <option value="2">2 часа</option>
                     <option value="3">3 часа</option>
