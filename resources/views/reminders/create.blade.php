@@ -44,6 +44,23 @@
                 </select>
             </div>
 
+            <div class="mt-4">
+                <p class="text-start">
+                    Уведомлять по:
+                </p>
+
+                <select id="inputState" class="form-select" name="date">
+                    <option value="1">Понедельниками</option>
+                    <option value="2">Вторникам</option>
+                    <option value="3">Средам</option>
+                    <option value="4">Четвергам</option>
+                    <option value="5">Пятницам</option>
+                    <option value="6">Субботам</option>
+                    <option value="7">Воскресеньям</option>
+                </select>
+            </div>
+
+
             <div class="mt-5">
                 <button class="btn btn-outline-info">Создать Запись</button>
             </div>
