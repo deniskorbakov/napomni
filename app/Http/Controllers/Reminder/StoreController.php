@@ -18,6 +18,7 @@ class StoreController extends Controller
             'content' => $data['content'],
             'value' => $data['value'],
             'date' => $data['date'],
+            'time' => $data['time'],
             'user_id' => Auth::id()
         ]);
 
