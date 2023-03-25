@@ -46,6 +46,12 @@
                 <input class="form-control" type="time" id="time" name="time">
             </div>
 
+            @error('time')
+            <div class="alert alert-danger mt-3" role="alert">
+                {{$message}}
+            </div>
+            @enderror
+
             <div class="mt-4">
                 <p class="text-start">
                     Уведомлять за:
