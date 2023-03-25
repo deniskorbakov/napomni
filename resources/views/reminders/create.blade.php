@@ -9,7 +9,14 @@
         <h3>Создание Записи</h3>
     </div>
 
-    <div class="container text-center mt-5">
+    <div class="text-start container mt-5">
+        <a href="{{route('reminders.index')}}" class="btn btn-outline-info">
+            <i class="fa-solid fa-arrow-left"></i>
+            Выйти
+        </a>
+    </div>
+
+    <div class="container text-center mt-4">
         <form action="{{route('reminders.store')}}" method="POST">
             @csrf
             <div class="input-group">
@@ -31,6 +38,13 @@
                 {{$message}}
             </div>
             @enderror
+
+            <div class="mt-4">
+                <p class="text-start">
+                    Время уведомления:
+                </p>
+                <input class="form-control" type="time" id="time" name="time">
+            </div>
 
             <div class="mt-4">
                 <p class="text-start">
@@ -59,7 +73,6 @@
                     <option value="7">Воскресеньям</option>
                 </select>
             </div>
-
 
             <div class="mt-5">
                 <button class="btn btn-outline-info">Создать Запись</button>
