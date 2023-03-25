@@ -17,6 +17,7 @@
                     <thead class="thead">
                         <th scope="col">Название Записи</th>
                         <th scope="col">Содержание записи</th>
+                        <th scope="col">Время записи</th>
                         <th scope="col">За сколько присылать уведомление</th>
                         <th scope="col">По каким дням присылать уведомление</th>
                         <th scope="col">Дата создания записи</th>
@@ -27,6 +28,7 @@
                         <tr>
                             <td>{{ $record->name }}</td>
                             <td>{{ $record->content }}</td>
+                            <td>{{ $record->time }}</td>
                             <td>{{ $record->value}}</td>
                             <td>{{ $record->date }}</td>
                             <td>{{ $record->created_at }}</td>
