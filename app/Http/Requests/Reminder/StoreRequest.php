@@ -27,8 +27,6 @@ class StoreRequest extends FormRequest
             'value' => 'required',
             'date' => 'required',
             'time' => 'required'
-
-
         ];
     }
 }
