@@ -25,6 +25,11 @@
                 <em>Дата создания записи: {{$recorder->created_at}}</em><br>
                 <em>Дата изменения записи: {{$recorder->created_at}}</em><br>
                 <a class="btn btn-info mt-4" href="{{route('reminders.edit', $recorder->id)}}">Изменить</a>
+                <form action="{{route('reminders.delete', $recorder->id)}}" method="POST" class="mt-2">
+                    @csrf
+                    @method('delete')
+                    <input type="submit" value="Удалить пост" class="btn btn-danger">
+                </form>
             </div>
         </article>
 @endsection
