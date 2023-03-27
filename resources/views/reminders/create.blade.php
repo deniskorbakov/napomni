@@ -81,7 +81,7 @@
             </div>
 
             <div class="mt-5">
-                <button class="btn btn-outline-info">Создать Запись</button>
+                <button class="btn btn-outline-info" type="submit">Создать Запись</button>
             </div>
         </form>
     </div>
