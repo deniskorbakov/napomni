@@ -13,6 +13,7 @@ Route::middleware('auth')->namespace('App\Http\Controllers\Reminder')->group(fun
     Route::get('/reminders','IndexController')->name('reminders.index');
     Route::get('/reminders/create','CreateController')->name('reminders.create');
     Route::post('/reminders','StoreController')->name('reminders.store');
+    Route::get('/reminders{recorder}','ShowController')->name('reminders.show');
 
 });
 
