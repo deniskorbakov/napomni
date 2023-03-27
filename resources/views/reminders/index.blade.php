@@ -21,6 +21,7 @@
                         <th scope="col">За сколько присылать уведомление</th>
                         <th scope="col">По каким дням присылать уведомление</th>
                         <th scope="col">Дата создания записи</th>
+                        <th scope="col">Действия</th>
                     </thead>
 
                     <tbody>
@@ -32,6 +33,10 @@
                             <td>{{ $record->value}}</td>
                             <td>{{ $record->date }}</td>
                             <td>{{ $record->created_at }}</td>
+                            <td>
+                                <a href="{{route('reminders.show', $record->id)}}" class="btn btn-info ms-2"><i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="" class="btn btn-danger ms-2"><i class="fa-solid fa-trash"></i></a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
