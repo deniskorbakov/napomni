@@ -16,6 +16,7 @@ Route::middleware('auth')->namespace('App\Http\Controllers\Reminder')->group(fun
     Route::get('/reminders/{recorder}','ShowController')->name('reminders.show');
     Route::get('/reminders/{recorder}/edit','EditController')->name('reminders.edit');
     Route::patch('/reminders/{recorder}','UpdateController')->name('reminders.update');
+    Route::delete('/reminders/{recorder}','DeleteController')->name('reminders.delete');
 
 });
 
