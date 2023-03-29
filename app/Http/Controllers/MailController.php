@@ -14,8 +14,9 @@ class MailController extends Controller
     {
         $users = User::pluck("email");
 
-        foreach ($users as $recipient) {
-            Mail::to($recipient)->send(new SendAllUsers());
+        foreach ($users as $user) {
+            Mail::to($user)->queue(new SendAllUsers());
+
         }
 
 
