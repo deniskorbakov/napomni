@@ -19,7 +19,8 @@ class StoreController extends Controller
             'value' => $data['value'],
             'date' => $data['date'],
             'time' => $data['time'],
-            'user_id' => Auth::id()
+            'user_id' => Auth::id(),
+            'user_email' => Auth::user()->value('email')
         ]);
 
         return redirect()->route('reminders.index');
