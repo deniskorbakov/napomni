@@ -2,8 +2,11 @@
 
 namespace App\Console;
 
+use App\Mail\SendAllUsers;
+use App\Models\Recorder;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\Mail;
 
 class Kernel extends ConsoleKernel
 {
@@ -12,7 +15,19 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->call(function () {
+            date_default_timezone_set("Europe/Moscow");
+            $recorders = Recorder::all();
+            foreach ($recorders as $recorder) {
+                $recorderTime = $recorder["time"];
+                $recorderTime = substr($recorderTime, 0,-3);
+
+                if ($recorderTime == date("H:i")) {
+                    Mail::to($recorder["user_email"])->send(new SendAllUsers());
+                }
+            }
+        })->everyMinute();
+
     }
 
     /**
