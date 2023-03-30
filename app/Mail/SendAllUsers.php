@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Recorder;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -16,10 +17,10 @@ class SendAllUsers extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
-    {
-        //
-    }
+    public function __construct(
+        public Recorder $recorder
+    )
+    {}
 
     /**
      * Get the message envelope.
@@ -37,7 +38,7 @@ class SendAllUsers extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail',
+            view: 'messageMail.mailRecorder',
         );
     }
 
