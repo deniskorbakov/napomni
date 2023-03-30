@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('content');
-            $table->time('value');
+            $table->integer('value');
+            $table->time('notify_for');
             $table->string('date');
             $table->time('time');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
