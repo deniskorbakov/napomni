@@ -9,7 +9,7 @@ Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name(
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(["verified"]);
 
-Route::middleware('auth')->namespace('App\Http\Controllers\Reminder')->group(function() {
+Route::middleware('verified')->namespace('App\Http\Controllers\Reminder')->group(function() {
     Route::get('/reminders','IndexController')->name('reminders.index');
     Route::get('/reminders/create','CreateController')->name('reminders.create');
     Route::post('/reminders','StoreController')->name('reminders.store');
