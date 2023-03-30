@@ -70,13 +70,13 @@
                 </p>
 
                 <select id="inputState" class="form-select" name="date">
-                    <option value="Monday">Понедельниками</option>
-                    <option value="Tuesday">Вторникам</option>
-                    <option value="Wednesday">Средам</option>
-                    <option value="Thursday">Четвергам</option>
-                    <option value="Friday">Пятницам</option>
-                    <option value="Saturday">Субботам</option>
-                    <option value="Sunday">Воскресеньям</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
                 </select>
             </div>
 
