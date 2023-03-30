@@ -81,63 +81,14 @@
                 </p>
 
                 <select id="inputState" class="form-select" name="date">
-                    @if($recorder->date == 1)
-                        <option value="1">Понедельниками</option>
-                        <option value="2">Вторникам</option>
-                        <option value="3">Средам</option>
-                        <option value="4">Четвергам</option>
-                        <option value="5">Пятницам</option>
-                        <option value="6">Субботам</option>
-                        <option value="7">Воскресеньям</option>
-                    @elseif($recorder->date == 2)
-                        <option value="2">Вторникам</option>
-                        <option value="1">Понедельниками</option>
-                        <option value="3">Средам</option>
-                        <option value="4">Четвергам</option>
-                        <option value="5">Пятницам</option>
-                        <option value="6">Субботам</option>
-                        <option value="7">Воскресеньям</option>
-                    @elseif($recorder->date == 3)
-                        <option value="3">Средам</option>
-                        <option value="1">Понедельниками</option>
-                        <option value="2">Вторникам</option>
-                        <option value="4">Четвергам</option>
-                        <option value="5">Пятницам</option>
-                        <option value="6">Субботам</option>
-                        <option value="7">Воскресеньям</option>
-                    @elseif($recorder->date == 4)
-                        <option value="4">Четвергам</option>
-                        <option value="1">Понедельниками</option>
-                        <option value="2">Вторникам</option>
-                        <option value="3">Средам</option>
-                        <option value="5">Пятницам</option>
-                        <option value="6">Субботам</option>
-                        <option value="7">Воскресеньям</option>
-                    @elseif($recorder->date == 5)
-                        <option value="5">Пятницам</option>
-                        <option value="1">Понедельниками</option>
-                        <option value="2">Вторникам</option>
-                        <option value="3">Средам</option>
-                        <option value="4">Четвергам</option>
-                        <option value="6">Субботам</option>
-                        <option value="7">Воскресеньям</option>
-                    @elseif($recorder->date == 6)
-                        <option value="6">Субботам</option>
-                        <option value="1">Понедельниками</option>
-                        <option value="2">Вторникам</option>
-                        <option value="3">Средам</option>
-                        <option value="4">Четвергам</option>
-                        <option value="5">Пятницам</option>
-                        <option value="7">Воскресеньям</option>
-                    @elseif($recorder->date == 7)
-                        <option value="7">Воскресеньям</option>
-                        <option value="1">Понедельниками</option>
-                        <option value="2">Вторникам</option>
-                        <option value="3">Средам</option>
-                        <option value="4">Четвергам</option>
-                        <option value="5">Пятницам</option>
-                        <option value="6">Субботам</option>
-                    @endif
+                    <option value="{{$recorder->date}}">{{$recorder->date}}</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
                 </select>
             </div>
 
