@@ -25,7 +25,8 @@ class StoreController extends Controller
        Recorder::create([
            'name' => $data['name'],
            'content' => $data['content'],
-           'value' => $newTime,
+           'value' => $data['value'],
+           'notify_for' => $newTime,
            'date' => $data['date'],
            'time' => $data['time'],
            'user_id' => Auth::id(),
