@@ -18,8 +18,14 @@ class RecorderFactory extends Factory
     public function definition(): array
     {
         return [
+            'name' => fake()->name(),
             'content' => fake()->name(),
-            'users_id' => fake()->unique()->numberBetween(1,50)
+            'value' => fake()->numberBetween(1,3),
+            'date' => fake()->numberBetween(1,7),
+            //свое время для теста
+            'time' => "11:57:00",
+            'user_id' => fake()->numberBetween(1,49),
+            'user_email' => fake()->email()
         ];
     }
 }
