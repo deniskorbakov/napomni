@@ -18,6 +18,7 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
             date_default_timezone_set("Europe/Moscow");
             $recorders = Recorder::all();
+
             foreach ($recorders as $recorder) {
                 $recorderTime = $recorder["time"];
                 $recorderTime = substr($recorderTime, 0,-3);
