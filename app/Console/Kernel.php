@@ -20,11 +20,11 @@ class Kernel extends ConsoleKernel
             $recorders = Recorder::all();
 
             foreach ($recorders as $recorder) {
-                $recorderTime = $recorder["time"];
+                $recorderTime = $recorder["notify_for"];
                 $recorderTime = substr($recorderTime, 0,-3);
 
-                if ($recorderTime == date("H:i")) {
-                    Mail::to($recorder["user_email"])->send(new SendAllUsers());
+                if ($recorder["date"] == date("l") and $recorderTime == date("H:i")) {
+                    Mail::to($recorder["user_email"])->send(new SendAllUsers($recorder));
                 }
             }
         })->everyMinute();
