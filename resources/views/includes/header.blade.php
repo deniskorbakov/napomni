@@ -18,6 +18,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('feedbacks.index')}}">Обратная связь</a>
                 </li>
+
+                @can('view', auth()->user())
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin.reminders.index')}}">Админ панель</a>
+                </li>
+                @endcan
             </ul>
 
             <div class="collapse navbar-collapse " id="navbarNav">
