@@ -10,8 +10,13 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Главная</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('reminders.index')}}">Создать напонимание</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('feedbacks.index')}}">Обратная связь</a>
                 </li>
             </ul>
 
