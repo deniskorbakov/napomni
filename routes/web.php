@@ -17,13 +17,14 @@ Route::middleware('verified')->namespace('App\Http\Controllers\Reminder')->group
     Route::get('/reminders/{recorder}/edit','EditController')->name('reminders.edit');
     Route::patch('/reminders/{recorder}','UpdateController')->name('reminders.update');
     Route::delete('/reminders/{recorder}','DeleteController')->name('reminders.delete');
-
 });
 
 Route::middleware('verified')->namespace('App\Http\Controllers\Feedback')->group(function() {
     Route::get('/feedbacks','IndexController')->name('feedbacks.index');
     Route::post('/feedbacks','StoreController')->name('feedbacks.store');
+});
 
-
+Route::middleware('admin')->prefix('admin')->namespace('App\Http\Controllers\Admin\Reminder')->group(function() {
+    Route::get('/reminders','IndexController')->name('admin.reminders.index');
 });
 
