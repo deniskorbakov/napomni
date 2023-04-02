@@ -12,7 +12,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 table-responsive">
                 <table class="table table-info table-striped table-hover mt-2">
                     <thead class="thead">
                         <th scope="col">Название Записи</th>
