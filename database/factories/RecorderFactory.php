@@ -22,6 +22,8 @@ class RecorderFactory extends Factory
             'content' => fake()->name(),
             'value' => fake()->numberBetween(1,3),
             'date' => fake()->numberBetween(1,7),
+            //за сколько присылать уведомление
+            'notify_for' => '09:57:00',
             //свое время для теста
             'time' => "11:57:00",
             'user_id' => fake()->numberBetween(1,49),
