@@ -20,3 +20,10 @@ Route::middleware('verified')->namespace('App\Http\Controllers\Reminder')->group
 
 });
 
+Route::middleware('verified')->namespace('App\Http\Controllers\Feedback')->group(function() {
+    Route::get('/feedbacks','IndexController')->name('feedbacks.index');
+    Route::post('/feedbacks','StoreController')->name('feedbacks.store');
+
+
+});
+
