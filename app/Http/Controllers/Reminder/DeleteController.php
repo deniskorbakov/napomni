@@ -2,13 +2,8 @@
 
 namespace App\Http\Controllers\Reminder;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Reminder\StoreRequest;
-use App\Http\Requests\Reminder\UpdateRequest;
 use App\Models\Recorder;
-use Illuminate\Support\Facades\Auth;
-
-class DeleteController extends Controller
+class DeleteController extends BaseController
 {
     public function __invoke(Recorder $recorder)
     {
