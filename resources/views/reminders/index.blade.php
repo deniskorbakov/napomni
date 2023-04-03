@@ -14,22 +14,23 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 @foreach($recorders as $record)
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="{{asset('icon/default.svg')}}" class="img-thumbnail">
-                        <div class="card-body">
-                            <p class="card-text">Название: {{ $record->name }}</p>
-                            <p class="card-text">Текст Записи: {{ $record->content }}</p>
-                            <p class="card-text">Время Записи: {{ $record->time}}</p>
-                            <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="{{asset('icon/default.svg')}}" class="img-thumbnail">
+                            <div class="card-body">
+                                <p class="card-text">Название: {{ $record->name }}</p>
+                                <p class="card-text">Текст Записи: {{ $record->content }}</p>
+                                <p class="card-text">Время Записи: {{ $record->time}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
 
-                                    <a href="{{route('reminders.show', $record->id)}}" class="btn btn-info"><i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="{{route('reminders.show', $record->id)}}" class="btn btn-info"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
 
-                                <small class="text-body-secondary">{{ $record->created_at }}</small>
+                                    <small class="text-body-secondary">{{ $record->created_at }}</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>

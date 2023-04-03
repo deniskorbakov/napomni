@@ -21,7 +21,8 @@
             @csrf
             @method('patch')
             <div class="input-group">
-                <input class="form-control" type="text" name="name" placeholder="Введите название напоминания" value="{{$recorder->name}}">
+                <input class="form-control" type="text" name="name" placeholder="Введите название напоминания"
+                       value="{{$recorder->name}}">
             </div>
 
             @error('name')
@@ -31,7 +32,8 @@
             @enderror
 
             <div class="input-group mt-4">
-                <textarea class="form-control" type="text" name="content" placeholder="Введите текст напоминания">{{$recorder->content}}</textarea>
+                <textarea class="form-control" type="text" name="content"
+                          placeholder="Введите текст напоминания">{{$recorder->content}}</textarea>
             </div>
 
             @error('content')

@@ -8,12 +8,10 @@
     <div class="container mt-2">
         <h1 class="text-center">Запись - {{$recorder->name}}</h1>
 
-
-            <a href="{{route('reminders.index')}}" class="btn btn-outline-info">
-                <i class="fa-solid fa-arrow-left"></i>
-                Выйти
-            </a>
-
+        <a href="{{route('reminders.index')}}" class="btn btn-outline-info">
+            <i class="fa-solid fa-arrow-left"></i>
+            Выйти
+        </a>
 
         <article class="alert alert-info mt-3" role="alert">
             <div class="container">

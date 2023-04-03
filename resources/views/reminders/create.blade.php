@@ -24,13 +24,14 @@
             </div>
 
             @error('name')
-                <div class="alert alert-danger mt-3" role="alert">
-                    {{$message}}
-                </div>
+            <div class="alert alert-danger mt-3" role="alert">
+                {{$message}}
+            </div>
             @enderror
 
             <div class="input-group mt-4">
-                <textarea class="form-control" type="text" name="content" placeholder="Введите текст напоминания"></textarea>
+                <textarea class="form-control" type="text" name="content"
+                          placeholder="Введите текст напоминания"></textarea>
             </div>
 
             @error('content')

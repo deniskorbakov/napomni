@@ -11,7 +11,8 @@
 
             <!-- Element on the left -->
             <div class="px-4">
-                <img src="https://ui-avatars.com/api/name={{ Auth::user()->name }}?background=0dcaf0&color=fff" class="rounded-circle" style="width: 150px;"
+                <img src="https://ui-avatars.com/api/name={{ Auth::user()->name }}?background=0dcaf0&color=fff"
+                     class="rounded-circle" style="width: 150px;"
                      alt="Avatar">
 
             </div>

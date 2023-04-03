@@ -27,7 +27,8 @@
             @enderror
 
             <div class="mt-4">
-                <textarea class="form-control" type="text" name="content" placeholder="Введите текст обращения"></textarea>
+                <textarea class="form-control" type="text" name="content"
+                          placeholder="Введите текст обращения"></textarea>
             </div>
 
             @error('content')
