@@ -27,4 +27,24 @@ class StoreRequest extends FormRequest
             'content' => 'required|string|min:3|max:300',
         ];
     }
+
+    public function attributes()
+    {
+        return [
+            'title' => 'Название Записи',
+            'content' => 'Текст Записи',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Название записи должно быть заполнено',
+            'content.required' => 'Текст записи должно быть заполнено',
+            'title.min' => 'Название записи должно быть минимум 3 символа',
+            'content.min' => 'Текст записи должно быть минимум 3 символа',
+            'title.max' => 'Название записи должно быть максимум 50 символов',
+            'content.max' => 'Текст записи должно быть минимум 300 символов',
+        ];
+    }
 }

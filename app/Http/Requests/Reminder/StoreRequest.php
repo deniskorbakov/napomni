@@ -29,4 +29,27 @@ class StoreRequest extends FormRequest
             'time' => 'required'
         ];
     }
+
+    public function attributes()
+    {
+        return [
+            'name' => 'Название Записи',
+            'content' => 'Текст Записи',
+            'time' => 'Время уведомления',
+
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Название записи должно быть заполнено',
+            'content.required' => 'Текст записи должно быть заполнено',
+            'time.required' => 'Уведомление записи должно быть заполнено',
+            'name.min' => 'Название записи должно быть минимум 3 символа',
+            'content.min' => 'Текст записи должно быть минимум 3 символа',
+            'name.max' => 'Название записи должно быть максимум 20 символов',
+            'content.max' => 'Текст записи должно быть минимум 100 символов',
+        ];
+    }
 }
