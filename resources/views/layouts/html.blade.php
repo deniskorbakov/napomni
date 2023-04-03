@@ -7,6 +7,7 @@
     <title>@yield('title')</title>
     <script src="https://kit.fontawesome.com/bd53d87eef.js" crossorigin="anonymous"></script>
     <link rel="icon" href="icon/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body class="d-flex flex-column min-vh-100">
