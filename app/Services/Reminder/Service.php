@@ -18,12 +18,24 @@ class Service
         //переводим в формат ч:м:с
         $newTime = $dataTime->format("H:i:s");
 
+        $dataEng = [
+            'Monday'=> 'Понедельник',
+            'Tuesday'=> 'Вторник',
+            'Wednesday'=> 'Среда',
+            'Thursday' => 'Четверг',
+            'Friday'=> 'Пятница',
+            'Saturday'=> 'Суббота',
+            'Sunday'=> 'Воскресенье',
+        ];
+
+        $weekEng = array_search($data['date'], $dataEng);
+
         Recorder::create([
             'name' => $data['name'],
             'content' => $data['content'],
             'value' => $data['value'],
             'notify_for' => $newTime,
-            'date' => $data['date'],
+            'date' => $weekEng,
             'time' => $data['time'],
             'user_id' => Auth::id(),
             'user_email' => Auth::user()->value('email')
