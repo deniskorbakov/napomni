@@ -28,8 +28,9 @@
                 <form action="{{route('reminders.delete', $recorder->id)}}" method="POST" class="mt-2">
                     @csrf
                     @method('delete')
-                    <input type="submit" value="Удалить пост" class="btn btn-danger">
+                    <input type="submit" value="Удалить Запись" class="btn btn-danger">
                 </form>
             </div>
         </article>
+    </div>
 @endsection
