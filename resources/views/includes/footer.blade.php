@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start mt-5">
+<footer class="text-center text-lg-start mt-auto">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
