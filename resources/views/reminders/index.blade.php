@@ -10,7 +10,7 @@
         <a href="{{route('reminders.create')}}" class="mt-4 btn btn-outline-info">Создать запись</a>
     </div>
 
-    <div class="album py-5 bg-body-tertiary">
+    <div class="album py-5">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 @foreach($recorders as $record)
