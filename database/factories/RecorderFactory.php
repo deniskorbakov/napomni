@@ -21,11 +21,12 @@ class RecorderFactory extends Factory
             'name' => fake()->name(),
             'content' => fake()->name(),
             'value' => fake()->numberBetween(1,3),
-            'date' => fake()->numberBetween(1,7),
+            //название дня недели
+            'date' => "Friday",
             //за сколько присылать уведомление
-            'notify_for' => '09:57:00',
+            'notify_for' => '18:19:00',
             //свое время для теста
-            'time' => "11:57:00",
+            'time' => "19:15:00",
             'user_id' => fake()->numberBetween(1,49),
             'user_email' => fake()->email()
         ];
