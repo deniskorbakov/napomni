@@ -45,3 +45,10 @@ services:
             - PMA_ARBITRARY=1
         depends_on:
             - db
+    mailpit:
+        image: axllent/mailpit
+        ports:
+            - 1025:1025
+            - 8025:8025
+        container_name: mailpit
+
